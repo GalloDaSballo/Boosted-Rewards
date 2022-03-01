@@ -47,7 +47,7 @@ def rewards_contract(deployer):
       Deploys the Contract without any setup
     """
 
-    contract = RewardsManager.deploy({"from": deployer})
+    contract = BoostedRewardsManager.deploy({"from": deployer})
 
     return contract 
 
@@ -58,7 +58,7 @@ def initialized_contract(deployer):
     Deploys the contract with full setup (epoch, rewards, deposit)
     """
 
-    contract = RewardsManager.deploy({"from": deployer})
+    contract = BoostedRewardsManager.deploy({"from": deployer})
     contract.startNextEpoch({"from": deployer})
 
     return contract 
@@ -70,7 +70,7 @@ def setup_contract(deployer):
     Deploys the contract with full setup (epoch, rewards, deposit)
     """
 
-    contract = RewardsManager.deploy({"from": deployer})
+    contract = BoostedRewardsManager.deploy({"from": deployer})
     contract.startNextEpoch({"from": deployer})
 
     ## TODO: Add a deposit

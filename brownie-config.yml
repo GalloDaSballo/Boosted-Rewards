@@ -8,14 +8,16 @@ autofetch_sources: True
 
 # require OpenZepplin Contracts
 dependencies:
-    - OpenZeppelin/openzeppelin-contracts@4.4.0
+    - OpenZeppelin/openzeppelin-contracts@4.5.0
+    - GalloDaSballo/badger-onchain-rewards@rfc.0.02
 
 # path remapping to support imports from GitHub/NPM
 compiler:
     solc:
-        version: 0.8.9
+        version: 0.8.10
         remappings:
-            - "@oz=OpenZeppelin/openzeppelin-contracts@4.4.0/contracts/"
+            - "@oz=OpenZeppelin/openzeppelin-contracts@4.5.0/contracts/"
+            - "@badger=GalloDaSballo/badger-onchain-rewards@rfc.0.02/contracts/"
 
 reports:
     exclude_contracts:
